@@ -1,4 +1,4 @@
-package com.satc.medify.model;
+package com.satc.medify.model.Student;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

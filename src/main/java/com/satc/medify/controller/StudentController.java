@@ -1,7 +1,7 @@
 package com.satc.medify.controller;
 
-import com.satc.medify.model.Student;
-import com.satc.medify.model.StudentRepository;
+import com.satc.medify.model.Student.Student;
+import com.satc.medify.model.Student.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

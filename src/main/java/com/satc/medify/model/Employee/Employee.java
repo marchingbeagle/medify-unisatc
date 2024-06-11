@@ -17,5 +17,11 @@ public class Employee {
     private Long id;
     private String name;
     private String role;
+
+    public Employee(EmployeeDTO employeeDTO) {
+        this.id = employeeDTO.id();
+        this.name = employeeDTO.name();
+        this.role = employeeDTO.role();
+    }
 }
 

@@ -25,7 +25,7 @@ class EmployeeServiceTest {
     EntityManager entityManager;
 
     @Test
-    @DisplayName("Should return user passing the id")
+    @DisplayName("Should return employee passing the id")
     void getEmployeeByIdCase1() {
         Long id = (long) 1;
         EmployeeDTO data = new EmployeeDTO(id, "John", "admin");
@@ -36,7 +36,7 @@ class EmployeeServiceTest {
     }
 
     @Test
-    @DisplayName("Should not return user passing the id")
+    @DisplayName("Should not return employee passing the id")
     void getEmployeeByIdCase2() {
         Long id = (long) 1;
 

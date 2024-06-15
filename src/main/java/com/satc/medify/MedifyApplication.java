@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MedifyApplication {
 
 	public static void main(String[] args) {
-		DotenvLoadService.load("./src/main/resources/.env");
+		//DotenvLoadService.load("./src/main/resources/.env");
 		SpringApplication.run(MedifyApplication.class, args);
 	}
 

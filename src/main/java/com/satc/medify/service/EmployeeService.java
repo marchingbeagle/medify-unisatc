@@ -24,11 +24,7 @@ public class EmployeeService {
     }
 
     public Employee createEmployee(EmployeeDTO employeeDTO) {
-        Employee employee = new Employee(
-                employeeDTO.id(),
-                employeeDTO.name(),
-                employeeDTO.role()
-        );
+        Employee employee = new Employee(employeeDTO);
         return employeeRepository.save(employee);
     }
 
@@ -46,7 +42,8 @@ public class EmployeeService {
     public boolean deleteEmployee(Long id) {
         Optional<Employee> existingEmployee = employeeRepository.findById(id);
         if (existingEmployee.isPresent()) {
-            employeeRepository.delete(existingEmployee.get());
+            existingEmployee.get().setIsActive(false);
+            employeeRepository.save(existingEmployee.get());
             return true;
         }
         return false;

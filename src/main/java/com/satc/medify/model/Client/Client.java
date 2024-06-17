@@ -19,6 +19,8 @@ public class Client {
     @Column(name = "phone_number")
     private String phoneNumber;
     private String cpf;
+    @Column(name = "is_active")
+    private Boolean isActive;
 
     public Client(ClientDTO clientDTO) {
         this.id = clientDTO.id();
@@ -26,5 +28,6 @@ public class Client {
         this.email = clientDTO.email();
         this.phoneNumber = clientDTO.phoneNumber();
         this.cpf = clientDTO.cpf();
+        this.isActive = true;
     }
 }

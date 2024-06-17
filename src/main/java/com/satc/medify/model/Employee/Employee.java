@@ -1,9 +1,6 @@
 package com.satc.medify.model.Employee;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @NoArgsConstructor
@@ -18,10 +15,14 @@ public class Employee {
     private String name;
     private String role;
 
+    @Column(name = "is_active")
+    private Boolean isActive;
+
     public Employee(EmployeeDTO employeeDTO) {
         this.id = employeeDTO.id();
         this.name = employeeDTO.name();
         this.role = employeeDTO.role();
+        this.isActive = true;
     }
 }
 

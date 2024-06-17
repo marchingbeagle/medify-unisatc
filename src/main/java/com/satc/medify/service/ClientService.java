@@ -43,7 +43,8 @@ public class ClientService {
     public boolean deleteClient(Long id) {
         Optional<Client> existingClient = clientRepository.findById(id);
         if (existingClient.isPresent()) {
-            clientRepository.delete(existingClient.get());
+            existingClient.get().setIsActive(false);
+            clientRepository.save(existingClient.get());
             return true;
         }
         return false;
